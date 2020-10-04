@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  margin-top: 0px;
+}
+
+.firstDiv {
+  background-color: blue;
+  width: 90%;
+  height: 200px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.firstDiv h1 {
+  font-size: 80px;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+  color: yellow;
+}
+
+.SecondDiv {
+  border-top: solid yellow 15px;
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: grey;
+}
+.SecondDiv input {
+  border-radius: 5px;
+  height: 35px;
+  width: 220px;
+}
+
+.Ajout {
+  border-radius: 5px;
+  color: black;
+  font-size: 25px;
+}
+.Ajout:active {
+  background-color: blue;
+  color: white;
+}
+
+.Mybouton {
+  border-radius: 5px;
+  color: white;
+  text-align: right;
+}
+.Mybouton button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 22px;
+}
+.Mybouton button:active {
+  background-color: blue;
+  color: white;
+}
+
+.divForMyBorder {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 900px;
+  border: solid 5px;
+  overflow: auto;
+  border-radius: 20px;
+}
+
+.divForContain {
+  background-color: blue;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.myDivForMyButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myButton {
+  margin-right: 45px;
+  border-radius: 70%;
+  width: 35px;
+  height: 35px;
+  outline-style: none;
+}
+.myButton:active {
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
