@@ -23,9 +23,13 @@ myButtonForAdd.addEventListener('click',()=>{
     if(myInput.value != ""){
 
         let myDivInMyList = document.createElement('div');
+
         myDivMylist.appendChild(myDivInMyList);
+
+        let mySpan = document.createElement('span');
+        myDivInMyList.appendChild(mySpan);
           
-        myDivInMyList.innerHTML+= myInput.value
+        mySpan.innerHTML+= myInput.value;
 
         myDivForMyButton = document.createElement('div');
         myDivInMyList.appendChild(myDivForMyButton);
@@ -57,29 +61,69 @@ myButtonForAdd.addEventListener('click',()=>{
 // ici je vais mettre un addEventListener pour chacun de mes boutons créer grace au addEventListener sur le bouton add
 
         let bouton1 = myDivForMyButton.querySelectorAll('button')[0];
+        bouton1.textContent = "delete";
+        bouton1.setAttribute('class','bouton1');
         console.log(bouton1);
         let bouton2 = myDivForMyButton.querySelectorAll('button')[1];
+        bouton2.textContent = "edit";
+        bouton2.setAttribute('class','bouton2');
         console.log(bouton2);
         let bouton3 = myDivForMyButton.querySelectorAll('button')[2];
+        bouton3.textContent = "check";
+        bouton3.setAttribute('class','bouton3')
         console.log(bouton3); 
-
+// le bouton1 à pour fonction de supprimer ma div   
         bouton1.addEventListener('click',()=>{
-                console.log('sergen');
-        });
+                let rep = prompt('voulez-vous vraiment supprimer ? oui ou non ? ');
+                if (rep == "oui") {
+                        myDivInMyList.classList = "divForIf"
+                        
+                }else if ( rep != "oui"){
 
+                }
+                else {
+                        alert ("entrer quelque chose")
+                }
+
+      
+                // myDivInMyList.setAttribute('id','myDivInMyList')
+
+        });
+// le bouton2 à pour fonction de modifier ma div   
         bouton2.addEventListener('click',()=>{
-                console.log('sergen');
-        });
+                let myNewInput = document.createElement('input');
+                myDivForMyButton.appendChild(myNewInput);
+                let myButton0 = document.createElement('button');
+                myDivForMyButton.appendChild
+                (myButton0);
+                myButton0.className = "bouton0";
+                myButton0.addEventListener('click',()=>{
+                        mySpan.innerText = myNewInput.value;
+                        if (myNewInput.value = "") {
+                                alert('vueillez compléter');        
+                        }
+                        myButton0.remove();
+                        myNewInput.remove();
 
+                })
+        });
+// le bouton1 à pour fonction de check ma div 
         bouton3.addEventListener('click',()=>{
-                console.log('sergen');
+                
+                myDivInMyList.classList.toggle ("bouton3Bis");
+                
+                bouton1.classList.toggle('testMicro');
+                bouton2.classList.toggle('testMicro');
+
+
         });
 
-        myInput.value = "";
+       
 
     }else{
             alert("vous n'avez rien écris veuillez remplir la case");
     };
+    myInput.value = "";
 });
 
 
